@@ -1,8 +1,12 @@
 .nav {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 16px;
+  background-color: #0f0f0f;
+  z-index: 11;
 }
 .logo {
   display: flex;
@@ -13,9 +17,11 @@
 .logo__menu {
   height: 24px;
   margin-right: 1rem;
+  cursor: pointer;
 }
 .logo__img {
   height: 24px;
+  cursor: pointer;
 }
 .logo__title {
   font-size: 22px;
@@ -58,6 +64,7 @@
   width: 64px;
   border: none;
   background-color: #222222;
+  cursor: pointer;
 }
 .search__form__icon {
   height: 24px;
@@ -69,6 +76,7 @@
   background-color: #181818;
   margin-left: 8px;
   border: none;
+  cursor: pointer;
 }
 .search__btnMicrofono:hover {
   background-color: #222222;
@@ -87,10 +95,12 @@
   margin-inline: 12px;
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 .buttons__avatar {
   margin: 12px;
   height: 32px;
   width: 32px;
   border-radius: 50%;
+  cursor: pointer;
 }
