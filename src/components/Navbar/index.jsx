@@ -1,10 +1,10 @@
 import styles from "./navbar.module.css";
-import Menu from "../../assets/Menu";
-import Youtube from "../../assets/Youtube";
-import Search from "../../assets/Search";
-import Microfono from "../../assets/Microfono";
-import Campana from "../../assets/Campana";
-import Camara from "../../assets/Camara";
+import Menu from "../icons/Menu";
+import Youtube from "../icons/Youtube";
+import Search from "../icons/Search";
+import Microfono from "../icons/Microfono";
+import Campana from "../icons/Campana";
+import Camara from "../icons/Camara";
 
 function index() {
   return (

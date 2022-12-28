@@ -1,6 +1,4 @@
-import React from "react";
-
-export function Youtube(props) {
+export default function Youtube(props) {
   return (
     <svg viewBox="0 0 256 180" {...props}>
       <path
@@ -14,5 +12,3 @@ export function Youtube(props) {
     </svg>
   );
 }
-
-export default Youtube;

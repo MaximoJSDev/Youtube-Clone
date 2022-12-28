@@ -1,6 +1,4 @@
-import React from "react";
-
-export function Microfono(props) {
+export default function Microfono(props) {
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -10,4 +8,3 @@ export function Microfono(props) {
     </svg>
   );
 }
-export default Microfono;

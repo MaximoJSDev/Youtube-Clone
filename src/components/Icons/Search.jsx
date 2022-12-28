@@ -1,6 +1,4 @@
-import React from "react";
-
-export function Search(props) {
+export default function Search(props) {
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -10,4 +8,3 @@ export function Search(props) {
     </svg>
   );
 }
-export default Search;

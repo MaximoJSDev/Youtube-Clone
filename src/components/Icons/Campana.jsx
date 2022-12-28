@@ -1,6 +1,4 @@
-import React from "react";
-
-export function Campana(props) {
+export default function Campana(props) {
   return (
     <svg viewBox="0 0 256 256" {...props}>
       <path
@@ -10,4 +8,3 @@ export function Campana(props) {
     </svg>
   );
 }
-export default Campana;

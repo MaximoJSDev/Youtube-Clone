@@ -1,6 +1,4 @@
-import React from "react";
-
-export function Menu(props) {
+export default function Menu(props) {
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -10,4 +8,3 @@ export function Menu(props) {
     </svg>
   );
 }
-export default Menu;

@@ -1,0 +1,37 @@
+.aside {
+  width: 240px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 1;
+  top: 56px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.aside__lista {
+  list-style: none;
+}
+.aside__lista li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  cursor: pointer;
+  padding-inline: 12px;
+  border-radius: 10px;
+}
+.aside__lista li:hover {
+  background-color: #ffffff1a;
+}
+.aside__lista svg, .aside__lista img {
+  height: 24px;
+  width: 24px;
+  margin-right: 24px;
+}
+.aside__lista img {
+  border-radius: 50%;
+}

@@ -1,6 +1,4 @@
-import React from "react";
-
-export function Camara(props) {
+export default function Camara(props) {
   return (
     <svg viewBox="0 0 24 24" {...props}>
       <path
@@ -10,4 +8,3 @@ export function Camara(props) {
     </svg>
   );
 }
-export default Camara;
