@@ -27,6 +27,15 @@
 .aside__lista li:hover {
   background-color: #ffffff1a;
 }
+.aside__lista h3 {
+  letter-spacing: unset;
+  padding: 6px 12px 4px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #f1f1f1;
+}
+
 .aside__lista svg, .aside__lista img {
   height: 24px;
   width: 24px;

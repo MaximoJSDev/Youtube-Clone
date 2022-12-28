@@ -42,33 +42,33 @@ function index() {
           <MostrarMas /> Mostrar más
         </li>
         <br />
-        <h3>Suscripciones</h3>
+        <h3 className={styles.aside__lista__suscripciones}>Suscripciones</h3>
         <li>
-          <img src="https://thispersondoesnotexist.com/image" alt="Canal" />
+          <img src="https://picsum.photos/50/50?random=1" alt="Canal" />
           <span>Midudev</span>
         </li>
         <li>
-          <img src="https://thispersondoesnotexist.com/image" alt="Canal" />
+          <img src="https://picsum.photos/50/50?random=2" alt="Canal" />
           <span>Fazt</span>
         </li>
         <li>
-          <img src="https://thispersondoesnotexist.com/image" alt="Canal" />
+          <img src="https://picsum.photos/50/50?random=3" alt="Canal" />
           <span>Aquino</span>
         </li>
         <li>
-          <img src="https://thispersondoesnotexist.com/image" alt="Canal" />
+          <img src="https://picsum.photos/50/50?random=4" alt="Canal" />
           <span>Cordura</span>
         </li>
         <li>
-          <img src="https://thispersondoesnotexist.com/image" alt="Canal" />
+          <img src="https://picsum.photos/50/50?random=5" alt="Canal" />
           <span>Mr. Beast</span>
         </li>
         <li>
-          <img src="https://thispersondoesnotexist.com/image" alt="Canal" />
+          <img src="https://picsum.photos/50/50?random=6" alt="Canal" />
           <span>Beniju</span>
         </li>
         <li>
-          <img src="https://thispersondoesnotexist.com/image" alt="Canal" />
+          <img src="https://picsum.photos/50/50?random=7" alt="Canal" />
           <span>Conterstine</span>
         </li>
         <li>
