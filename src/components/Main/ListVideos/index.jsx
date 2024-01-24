@@ -1,48 +1,60 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import styles from "../main.module.css";
+import { useInView } from 'react-intersection-observer';
 
 function index() {
   const [listvideos, setListvideos] = useState([]);
-  // const [pageToken, setPageToken] = useState("");
+  const [pageToken, setPageToken] = useState();
+  const countVideos = useRef();
+  const  { ref , inView , entry  }  =  useInView();
+  const httpVideo = "https://youtube.googleapis.com/youtube/v3/videos?";
 
-  useEffect(() => {
-    const getData = async (pageToken) => {
-      let res = await fetch(
-        "https://youtube.googleapis.com/youtube/v3/videos?pageToken=CBkQAA&part=snippet&part=statistics&chart=mostPopular&maxResults=32&key=AIzaSyDhgFhE73O9hPnctRkACm_X6cHm7kwXipM"
-      );
-      let data = await res.json();
-      setListvideos(data.items);
-      console.log(data);
-    };
-    getData();
-  }, []);
+  const nextPage = async () => {
+    let res = await fetch(httpVideo + new URLSearchParams({
+      key: import.meta.env.VITE_API_KEY,
+      part: ["snippet","statistics"],
+      chart: "mostPopular",
+      maxResults: 10,
+      regionCode: "MX",
+      pageToken: pageToken ? pageToken: ""
+    }))
+    let data = await res.json();
+    setPageToken(data.nextPageToken);
+    setListvideos([...listvideos, ...data.items]);
+  }
+
+  if (inView && entry?.isIntersecting && countVideos.current.childElementCount < 200) {
+    nextPage();
+  }
 
   return (
     <div className={styles.main__contents}>
-      <div className={styles.main__contents__grid}>
+      <div className={styles.main__contents__grid} ref={countVideos}>
         {listvideos.map(({ id, statistics, snippet: video }) => (
-          <div className={styles.video} key={id}>
-            <img
-              className={styles.video__thumbnail}
-              src={
-                video.thumbnails.maxres?.url || video.thumbnails.standard?.url
-              }
-              alt={video.title}
-            />
-            <div className={styles.video__details}>
+            <div className={styles.video} key={id}>
               <img
-                className={styles.video__details__avatar}
-                src="https://picsum.photos/50/50?random=1"
-                alt=""
+                className={styles.video__thumbnail}
+                src={
+                  video?.thumbnails.maxres?.url || video.thumbnails.standard?.url
+                }
+                alt={video.title}
               />
-              <div className={styles.video__details__content}>
-                <h3>{video.title}</h3>
-                <span>{video.channelTitle}</span>
-                <span>{statistics.viewCount} de vistas</span>
+              <div className={styles.video__details}>
+                <img
+                  className={styles.video__details__avatar}
+                  src="https://picsum.photos/50/50?random=1"
+                  alt=""
+                />
+                <div className={styles.video__details__content}>
+                  <h3>{video.title}</h3>
+                  <span>{video.channelTitle}</span>
+                  <span>{statistics.viewCount} de vistas</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          )) 
+        }
+        <div ref={ref}>endpoint</div>
       </div>
     </div>
   );

@@ -1,19 +1,16 @@
 .aside {
+  grid-area: aside;
+  background-color: #0f0f0f;
   width: 240px;
-  padding: 12px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: fixed;
-  z-index: 1;
-  top: 56px;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
+
 .aside__lista {
   list-style: none;
+  position: sticky;
+  top: 56px;
+  padding: 12px;
 }
+
 .aside__lista li {
   height: 40px;
   display: flex;
@@ -24,9 +21,11 @@
   padding-inline: 12px;
   border-radius: 10px;
 }
+
 .aside__lista li:hover {
   background-color: #ffffff1a;
 }
+
 .aside__lista h3 {
   letter-spacing: unset;
   padding: 6px 12px 4px;
@@ -36,11 +35,13 @@
   color: #f1f1f1;
 }
 
-.aside__lista svg, .aside__lista img {
+.aside__lista svg,
+.aside__lista img {
   height: 24px;
   width: 24px;
   margin-right: 24px;
 }
+
 .aside__lista img {
   border-radius: 50%;
 }
