@@ -59,6 +59,11 @@ span.main__header__active {
   cursor: pointer;
 }
 
+.video__link {
+  color: #fff;
+  text-decoration: none;
+}
+
 .video__thumbnail {
   width: 100%;
   object-fit: cover;
